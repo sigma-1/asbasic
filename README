@@ -1,7 +1,7 @@
-Bas is an interpreter for the classic dialect of the programming language
+ASbasic is an interpreter for the classic dialect of the programming language
 BASIC.  It is pretty compatible to typical BASIC interpreters of the 1980s,
 unlike some other UNIX BASIC interpreters, that implement a different
-syntax, breaking compatibility to existing programs.  Bas offers many ANSI
+syntax, breaking compatibility to existing programs.  ASbasic offers many ANSI
 BASIC statements for structured programming, such as procedures, local
 variables and various loop types.  Further there are matrix operations,
 automatic LIST indentation and many statements and functions found in
@@ -10,10 +10,10 @@ specific classic dialects.  Line numbers are not required.
 The interpreter tokenises the source and resolves references to variables
 and jump targets before running the program.  This compilation pass
 increases efficiency and catches syntax errors, type errors and references
-to variables that are never initialised.  Bas is written in ANSI C for
+to variables that are never initialised.  ASbasic is written in ANSI C for
 UNIX systems.
 
-Please do "make check" after compiling bas to run a couple regression
+Please do "make check" after compiling asbasic to run a couple regression
 tests.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,3 +1,9 @@
+Changes compared to Bas version 2.4
+
+o  Cosmetic changes to the prompt to look like Applesoft BASIC from the Apple II.
+o  Renamed to ASbasic.
+
+
 Changes compared to version 2.3
 
 o  Matrix inversion on integer arrays with option base 1 fixed
