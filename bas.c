@@ -1638,12 +1638,12 @@ void bas_runLine(const char *runLine) /*{{{*/
 /*}}}*/
 void bas_interpreter(void) /*{{{*/
 {
-  if (FS_istty(STDCHANNEL))
+  /*if (FS_istty(STDCHANNEL))
   {
     FS_putChars(STDCHANNEL,"bas " VERSION "\n");
     FS_putChars(STDCHANNEL,"Copyright 1999-2014 Michael Haardt.\n");
     FS_putChars(STDCHANNEL,_("This is free software with ABSOLUTELY NO WARRANTY.\n"));
-  }
+  }*/
   new();
   while (1)
   {
@@ -1653,7 +1653,7 @@ void bas_interpreter(void) /*{{{*/
     FS_intr=0; stopped=0;
     FS_allowIntr(1);
     FS_nextline(STDCHANNEL);
-    if (FS_istty(STDCHANNEL)) FS_putChars(STDCHANNEL,"> ");
+    if (FS_istty(STDCHANNEL)) FS_putChars(STDCHANNEL,"]");
     FS_flush(STDCHANNEL);
     String_new(&s);
     if (FS_appendToString(STDCHANNEL,&s,1)==-1)

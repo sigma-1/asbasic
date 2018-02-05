@@ -37,6 +37,9 @@ int main(int argc, char *argv[]) /*{{{*/
   int uppercase=0;
   int restricted=0;
   int lpfd;
+
+  system("clear ; tput cup 9999 0");
+  
   static struct option lopts[]=
   {
     { "lp", required_argument, 0, 'l' },

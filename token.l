@@ -1335,7 +1335,7 @@ void Token_destroy(struct Token *token) /*{{{*/
       case T_CHDIR:             break;
       case T_CLEAR:             break;
       case T_CLOSE:             break;
-      case T_CLS:               break;
+      case T_CLS:               system("tput cup 9999 0"); break;
       case T_COLON:             break;
       case T_COLOR:             break;
       case T_COMMA:             break;
