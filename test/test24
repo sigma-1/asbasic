@@ -24,7 +24,7 @@ cat >test.ref <<'eof'
  10            11           
 eof
 
-sh ./test/runbas test.bas >test.data
+sh ./test/runasbasic test.bas >test.data
 
 if cmp test.ref test.data
 then

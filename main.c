@@ -24,7 +24,7 @@
 #endif
 
 #include "getopt.h"
-#include "bas.h"
+#include "asbasic.h"
 /*}}}*/
 
 int main(int argc, char *argv[]) /*{{{*/
@@ -59,8 +59,8 @@ int main(int argc, char *argv[]) /*{{{*/
   setlocale(LC_MESSAGES,"");
   setlocale(LC_CTYPE,"");
 #ifdef HAVE_GETTEXT
-  bindtextdomain("bas",LOCALEDIR);
-  textdomain("bas");
+  bindtextdomain("asbasic",LOCALEDIR);
+  textdomain("asbasic");
 #endif
   /* parse arguments */ /*{{{*/
   while ((o=getopt_long(argc,argv,"+bl:ruVh?",lopts,(int*)0))!=EOF) switch (o)
@@ -69,27 +69,27 @@ int main(int argc, char *argv[]) /*{{{*/
     case 'l': lp=optarg; break;
     case 'u': uppercase=1; break;
     case 'r': restricted=1; break;
-    case 'V': printf("bas " VERSION "\n"); exit(0); break;
+    case 'V': printf("asbasic " VERSION "\n"); exit(0); break;
     case 'h': usage=2; break;
     default: usage=1; break;
   }
   if (optind<argc) runFile=argv[optind++];
   if (usage==1)
   {
-    fputs(_("Usage: bas [-b] [-l file] [-r] [-u] [program [argument ...]]\n"),stderr);
-    fputs(_("       bas [--backslash-colon] [--lp file] [--restricted] [--uppercase] [program [argument ...]]\n"),stderr);
-    fputs(_("       bas -h|--help\n"),stderr);
-    fputs(_("       bas --version\n"),stderr);
+    fputs(_("Usage: asbasic [-b] [-l file] [-r] [-u] [program [argument ...]]\n"),stderr);
+    fputs(_("       asbasic [--backslash-colon] [--lp file] [--restricted] [--uppercase] [program [argument ...]]\n"),stderr);
+    fputs(_("       asbasic -h|--help\n"),stderr);
+    fputs(_("       asbasic --version\n"),stderr);
     fputs(  "\n",stderr);
-    fputs(_("Try `bas -h' or `bas --help' for more information.\n"),stderr);
+    fputs(_("Try `asbasic -h' or `asbasic --help' for more information.\n"),stderr);
     exit(1);
   }
   if (usage==2)
   {
-    fputs(_("Usage: bas [-b] [-l file] [-u] [program [argument ...]]\n"),stdout);
-    fputs(_("       bas [--backslash-colon] [--lp file] [--restricted] [--uppercase] [program [argument ...]]\n"),stdout);
-    fputs(_("       bas -h|--help\n"),stdout);
-    fputs(_("       bas --version\n"),stdout);
+    fputs(_("Usage: asbasic [-b] [-l file] [-u] [program [argument ...]]\n"),stdout);
+    fputs(_("       asbasic [--backslash-colon] [--lp file] [--restricted] [--uppercase] [program [argument ...]]\n"),stdout);
+    fputs(_("       asbasic -h|--help\n"),stdout);
+    fputs(_("       asbasic --version\n"),stdout);
     fputs("\n",stdout);
     fputs(_("BASIC interpreter.\n"),stdout);
     fputs("\n",stdout);
@@ -105,17 +105,17 @@ int main(int argc, char *argv[]) /*{{{*/
   }
   if ((lpfd=open(lp,O_WRONLY|O_CREAT|O_TRUNC,0666))==-1)
   {
-    fprintf(stderr,_("bas: Opening `%s' for line printer output failed (%s).\n"),lp,strerror(errno));
+    fprintf(stderr,_("asbasic: Opening `%s' for line printer output failed (%s).\n"),lp,strerror(errno));
     exit(2);
   }
-  bas_argc=argc-optind;
-  bas_argv=&argv[optind];
-  bas_argv0=runFile;
+  asbasic_argc=argc-optind;
+  asbasic_argv=&argv[optind];
+  asbasic_argv0=runFile;
   /*}}}*/
-  bas_init(backslash_colon,restricted,uppercase,lpfd);
-  if (runFile) bas_runFile(runFile);
-  else bas_interpreter();
-  bas_exit();
+  asbasic_init(backslash_colon,restricted,uppercase,lpfd);
+  if (runFile) asbasic_runFile(runFile);
+  else asbasic_interpreter();
+  asbasic_exit();
   return(0);
 }
 /*}}}*/

@@ -1,11 +1,11 @@
 ' t
-.TH BAS 1 "@UPDATED@" "" "User commands"
+.TH ASBASIC 1 "@UPDATED@" "" "User commands"
 .SH NAME \"{{{roff}}}\"{{{
-bas \- BASIC interpreter
+asbasic \- BASIC interpreter
 .\"}}}
 .SH SYNOPSIS \"{{{
 .ad l
-.B bas
+.B asbasic
 .RB [ \-b ]
 .RB [ \-l
 .IR file ]
@@ -13,7 +13,7 @@ bas \- BASIC interpreter
 .RB [ \-u ]
 .RI [ "program " [ argument "...]]"
 .br
-.B bas
+.B asbasic
 .RB [ \-\-backslash\-colon ]
 .RB [ \-\-lp
 .IR file ]
@@ -21,16 +21,16 @@ bas \- BASIC interpreter
 .RB [ \-\-uppercase ]
 .RI [ "program " [ argument "...]]"
 .br
-.B bas
+.B asbasic
 .BR \-h | \-\-help
 .br
-.B bas
+.B asbasic
 .BR \-\-version
 .ad b
 .\"}}}
 .SH DESCRIPTION \"{{{
 .SS "Introduction" \"{{{
-.B Bas
+.B asbasic
 is an interpreter for the classic dialect of the programming language
 BASIC, as typically found on microcomputers of the eighties.  If no
 file is given, it reads optionally numbered lines from standard input.
@@ -46,7 +46,7 @@ to renumber the program first or \fBedit\fP to modify the entire program
 inside an editor.  If a numbered program is loaded, typing a line number
 with an otherwise empty line deletes that line same the \fBdelete\fP does.
 .PP
-If a \fIprogram\fP is given, it is loaded, compiled and run; \fBbas\fP
+If a \fIprogram\fP is given, it is loaded, compiled and run; \fBasbasic\fP
 will exit if program execution \fBstop\fPs, \fBend\fPs or just hits the
 end of the program.  If the
 first line of a program file begins with \fB#!\fP, it is ignored by
@@ -60,7 +60,7 @@ a program for compatibility with dialects that use them e.g. to indicate
 array indices.
 .IP "[\fBcall\fP] \fIfunction\fP[\fB(\fP\fIargument\fP{\fB,\fP \fIargument\fP\fB)\fP]" \"{{{
 Call the \fIfunction\fP or procedure.  The ANSI syntax requires the
-keyword \fBcall\fP, whereas other BASIC dialects don't.  In \fBbas\fP,
+keyword \fBcall\fP, whereas other BASIC dialects don't.  In \fBasbasic\fP,
 \fBcall\fP is optional.
 .\"}}}
 .IP "\fBchdir\fP \fIdirectory$\fP" \"{{{
@@ -110,7 +110,7 @@ in direct mode.  Note: Multi line functions are not supported by all
 BASIC dialects.  Some dialects allow white space between the \fBfn\fP
 and the rest of the identifier, because they use \fBfn\fP as token
 to mark function identifiers for both declaration and function call.
-\fBBas\fP removes that space when loading a program.
+\fBasbasic\fP removes that space when loading a program.
 .\"}}}
 .IP "\fBdefdbl\fP \fIvariable\fP[\fB\-\fP\fIvariable\fP]" \"{{{
 Declare the global \fIvariable\fP as real.  Only unqualified variables (no
@@ -174,7 +174,7 @@ equivalent to \fBrepeat\fP/\fBuntil\fP.
 .IP "\fBedit\fP [\fIline\fP]" \"{{{
 Save the program to a temporary file, start an external editor on that
 file and load the program again from the file.  If a \fIline\fP is given,
-the editor is told to start on that line.  \fBBas\fP knows the calling
+the editor is told to start on that line.  \fBasbasic\fP knows the calling
 conventions for a number of common editors, but if your favourite is not
 among them or does not support that feature, the line will be ignored.
 The editor is specified by the environment variable \fBVISUAL\fP, or
@@ -184,7 +184,7 @@ The editor is specified by the environment variable \fBVISUAL\fP, or
 .IP "\fBend\fP" \"{{{
 End program execution.  If the program was started from direct mode,
 return to direct mode, otherwise the interpreter terminates.  Although
-allowed by BASIC itself, \fBbas\fP only allows \fBreturn\fP statements
+allowed by BASIC itself, \fBasbasic\fP only allows \fBreturn\fP statements
 to be followed by a colon and a comment, because anything else would
 be unreachable.  In interactive mode, a diagnostic message is printed
 to indicate the program did not just terminated after the last line.
@@ -243,7 +243,7 @@ instead of being read from the current position.  The first position is 1.
 Continue execution at the specified line.  If used from direct mode, the
 program will first be compiled.  The older two word \fBgo to\fP will be
 converted into the newer \fBgoto\fP.  Although allowed by BASIC itself,
-\fBbas\fP only allows \fBgoto\fP statements to be followed by a colon
+\fBasbasic\fP only allows \fBgoto\fP statements to be followed by a colon
 and a comment, because anything else would be unreachable.  This also
 concerns assigned \fBgoto\fP statements.
 .\"}}}
@@ -252,14 +252,14 @@ Execute the subroutine at the specified line.  The older two word \fBgo
 sub\fP will be converted into the newer \fBgosub\fP.  If used from direct
 mode, the program will first be compiled.  The \fBreturn\fP statement
 returns from subroutines.  Abbreviation: \fBr.\fP Although allowed by
-BASIC itself, \fBbas\fP only allows \fBreturn\fP statements to be followed
+BASIC itself, \fBasbasic\fP only allows \fBreturn\fP statements to be followed
 by a colon and a comment, because anything else would be unreachable.
 .\"}}}
 .IP "\fBif\fP \fIcondition\fP [\fBthen\fP] \fIstatements\fP [\fBelse\fP \fIstatements\fP]" \"{{{
 If the \fIcondition\fP evaluates to a non-zero number of a non-empty
 string, the statements after \fBthen\fP are executed.  Otherwise,
 the statements after \fBelse\fP are executed.  If the \fBthen\fP or
-\fBelse\fP statements are directly followed by an integer, \fBbas\fP
+\fBelse\fP statements are directly followed by an integer, \fBasbasic\fP
 inserts a \fBgoto\fP statement before the number and if the condition
 is directly followed by a \fBgoto\fP statement, a \fBthen\fP is inserted.
 .IP "\fBif\fP \fIcondition\fP \fBthen\fP"
@@ -277,7 +277,7 @@ Define a format for \fBprint using\fP.  Instead of using string
 variables, print formats can be defined this way and referred to by the
 line number.  The \fIformat\fP can be given as a string literal, which
 allows leading and trailing space, or without enclosing double quotes.
-\fBBas\fP converts the second form to a quoted string.  This statement is
+\fBasbasic\fP converts the second form to a quoted string.  This statement is
 ignored during execution.  \fBNote\fP: No two dialects share the syntax
 and semantics for numbered print formats, but many offer it one way or
 another.  This statement allows you to adapt much existing code with small
@@ -504,7 +504,7 @@ implementations offer independent locks for reading and writing,
 others offer shared locks (usually used for many readers) and
 exclusive locks (usually used for writers).  Additionally, locks may
 be advisory/cooperative or mandatory.  Most dialects use exclusive
-locks of highest protection by default.  \fBBas\fP implements POSIX
+locks of highest protection by default.  \fBasbasic\fP implements POSIX
 shared/exclusive locks, which are usually advisory, and offers the
 following:
 .RS
@@ -525,7 +525,7 @@ had different lock semantics!
 Specify the lowest array index for \fBdim\fP (zero by default).  Note:
 Many BASIC dialects enforce the base to be 0 or 1, further they require
 the base to be specified only once and before creating any arrays.
-\fBBas\fP allows to set an individual base for any array, but all
+\fBasbasic\fP allows to set an individual base for any array, but all
 \fBmat\fP functions require the bases of their operands to be equal and
 to be 0 or 1.
 .\"}}}
@@ -677,7 +677,7 @@ a feature.
 End an exception handler and continue execution at the specified line.
 This is only needed if you intend to re-throw exceptions by on \fBon error
 goto 0\fP.
-Although allowed by BASIC itself, \fBbas\fP
+Although allowed by BASIC itself, \fBasbasic\fP
 only allows \fBresume\fP statements to be followed by a colon and a comment,
 because anything else would be unreachable.
 .\"}}}
@@ -709,7 +709,7 @@ any branch, control passes to the statement following \fBend select\fP.
 .\"}}}
 .IP "\fBshell\fP [\fIcommand$\fP]" \"{{{
 If a \fIcommand$\fP is given, it is executed as child process of
-\fBbas\fP as bourne shell command.  If used without a \fIcommand$\fP,
+\fBasbasic\fP as bourne shell command.  If used without a \fIcommand$\fP,
 the shell specified by the environment variable \fBSHELL\fP (defaults
 to the bourne shell if not set) is started without arguments.
 .\"}}}
@@ -735,7 +735,7 @@ Swap the contents of \fIlvalue1\fP and \fIlvalue2\fP.  Both must
 be of identical type.
 .\"}}}
 .IP "\fBsystem\fP" \"{{{
-Exit from \fBbas\fP.  Alternatively, \fBbye\fP may be used.
+Exit from \fBasbasic\fP.  Alternatively, \fBbye\fP may be used.
 .\"}}}
 .IP "\fBtron\fP" \"{{{
 Enable tracing by printing the line number of each executed program line.
@@ -752,7 +752,7 @@ Release any locks on the file associated with the \fIchannel%\fP.
 .\"}}}
 .IP "\fBunnum\fP" \"{{{
 Remove all line numbers that are not needed, which is the the opposite
-to \fBrenum\fP.  This command is specific to \fBbas\fP, although a
+to \fBrenum\fP.  This command is specific to \fBasbasic\fP, although a
 similar command is found in Bytewater BASIC.
 .\"}}}
 .IP "\fBwait\fP \fIaddress\fP\fB,\fP\fImask\fP\fB,\fP\fIselect\fP" \"{{{
@@ -797,7 +797,7 @@ String constants may contain paired double quotes to specify double quote
 characters inside strings.  If the constant is terminated by the end of
 the line, the trailing double quote can be omitted.  Numeric constants
 with the suffix \fB#\fP or \fB!\fP are always regarded as floating point
-constants, \fBbas\fP ignores the precision specification, because it
+constants, \fBasbasic\fP ignores the precision specification, because it
 does not offer different precisions.  Integer constants may be followed
 by the suffix \fB%\fP.  If an integer literal is outside the integer
 value range, it is treated as a floating point literal.

@@ -19,7 +19,7 @@ hello, world
 hello, world
 eof
 
-sh ./test/runbas test5.bas >test5.data
+sh ./test/runasbasic test5.bas >test5.data
 
 if cmp test5.ref test5.data
 then

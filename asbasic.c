@@ -25,7 +25,7 @@
 #include "getopt.h"
 
 #include "auto.h"
-#include "bas.h"
+#include "asbasic.h"
 #include "error.h"
 #include "fs.h"
 #include "global.h"
@@ -82,10 +82,10 @@ static struct Program program;
 static struct Global globals;
 static int run_restricted;
 
-int bas_argc;
-char *bas_argv0;
-char **bas_argv;
-int bas_end;
+int asbasic_argc;
+char *asbasic_argv0;
+char **asbasic_argv;
+int asbasic_end;
 /*}}}*/
 /* forward prototypes */ /*{{{*/
 static struct Value *statements(struct Value *value);
@@ -1568,11 +1568,11 @@ static struct Value *statements(struct Value *value) /*{{{*/
 }
 /*}}}*/
 
-void bas_init(int backslash_colon, int restricted, int uppercase, int lpfd) /*{{{*/
+void asbasic_init(int backslash_colon, int restricted, int uppercase, int lpfd) /*{{{*/
 {
 #ifdef HAVE_GETTEXT
-  bindtextdomain("bas",LOCALEDIR);
-  textdomain("bas");
+  bindtextdomain("asbasic",LOCALEDIR);
+  textdomain("asbasic");
 #endif
   stack.begindata.line=-1;
   Token_init(backslash_colon,uppercase);
@@ -1584,7 +1584,7 @@ void bas_init(int backslash_colon, int restricted, int uppercase, int lpfd) /*{{
   run_restricted=restricted;
 }
 /*}}}*/
-void bas_runFile(const char *runFile) /*{{{*/
+void asbasic_runFile(const char *runFile) /*{{{*/
 {
   struct Value value;
   int dev;
@@ -1594,7 +1594,7 @@ void bas_runFile(const char *runFile) /*{{{*/
   {
     const char *errmsg=FS_errmsg;
 
-    FS_putChars(0,_("bas: Executing `"));
+    FS_putChars(0,_("asbasic: Executing `"));
     FS_putChars(0,runFile);
     FS_putChars(0,_("' failed ("));
     FS_putChars(0,errmsg);
@@ -1604,7 +1604,7 @@ void bas_runFile(const char *runFile) /*{{{*/
   {
     struct String s;
 
-    FS_putChars(0,"bas: ");
+    FS_putChars(0,"asbasic: ");
     String_new(&s);
     Value_toString(&value,&s,' ',-1,0,0,0,0,-1,0,0);
     FS_putString(0,&s);
@@ -1627,7 +1627,7 @@ void bas_runFile(const char *runFile) /*{{{*/
   }
 }
 /*}}}*/
-void bas_runLine(const char *runLine) /*{{{*/
+void asbasic_runLine(const char *runLine) /*{{{*/
 {
   struct Token *line;
 
@@ -1636,7 +1636,7 @@ void bas_runLine(const char *runLine) /*{{{*/
   Token_destroy(line);
 }
 /*}}}*/
-void bas_interpreter(void) /*{{{*/
+void asbasic_interpreter(void) /*{{{*/
 {
   /*if (FS_istty(STDCHANNEL))
   {
@@ -1706,10 +1706,10 @@ void bas_interpreter(void) /*{{{*/
       {
         runline(line+1);
         Token_destroy(line);
-        if (FS_istty(STDCHANNEL) && bas_end>0)
+        if (FS_istty(STDCHANNEL) && asbasic_end>0)
         {
           FS_putChars(STDCHANNEL,_("END program\n"));
-          bas_end=0;
+          asbasic_end=0;
         }
       }
       else
@@ -1723,7 +1723,7 @@ void bas_interpreter(void) /*{{{*/
   FS_allowIntr(0);
 }
 /*}}}*/
-void bas_exit(void) /*{{{*/
+void asbasic_exit(void) /*{{{*/
 {
   Auto_destroy(&stack);
   Global_destroy(&globals);

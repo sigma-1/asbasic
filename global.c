@@ -22,7 +22,7 @@
 #include <unistd.h>
 
 #include "auto.h"
-#include "bas.h"
+#include "asbasic.h"
 #include "error.h"
 #include "fs.h"
 #include "global.h"
@@ -367,10 +367,10 @@ static struct Value *fn_command(struct Value *v, struct Auto *stack) /*{{{*/
   int i;
 
   Value_new_STRING(v);
-  for (i=0; i<bas_argc; ++i)
+  for (i=0; i<asbasic_argc; ++i)
   {
     if (i) String_appendChar(&v->u.string,' ');
-    String_appendChars(&v->u.string,bas_argv[i]);
+    String_appendChars(&v->u.string,asbasic_argv[i]);
   }
   return v;
 }
@@ -384,9 +384,9 @@ static struct Value *fn_commandi(struct Value *v, struct Auto *stack) /*{{{*/
   Value_new_STRING(v);
   if (a==0)
   {
-    if (bas_argv0!=(char*)0) String_appendChars(&v->u.string,bas_argv0);
+    if (asbasic_argv0!=(char*)0) String_appendChars(&v->u.string,asbasic_argv0);
   }
-  else if (a<=bas_argc) String_appendChars(&v->u.string,bas_argv[a-1]);
+  else if (a<=asbasic_argc) String_appendChars(&v->u.string,asbasic_argv[a-1]);
   return v;
 }
 /*}}}*/
@@ -400,9 +400,9 @@ static struct Value *fn_commandd(struct Value *v, struct Auto *stack) /*{{{*/
   Value_new_STRING(v);
   if (a==0)
   {
-    if (bas_argv0!=(char*)0) String_appendChars(&v->u.string,bas_argv0);
+    if (asbasic_argv0!=(char*)0) String_appendChars(&v->u.string,asbasic_argv0);
   }
-  else if (a<=bas_argc) String_appendChars(&v->u.string,bas_argv[a-1]);
+  else if (a<=asbasic_argc) String_appendChars(&v->u.string,asbasic_argv[a-1]);
   return v;
 }
 /*}}}*/

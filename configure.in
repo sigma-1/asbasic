@@ -1,4 +1,4 @@
-AC_INIT(bas.c)
+AC_INIT(asbasic.c)
 AC_CONFIG_HEADER(config.h)
 AC_CANONICAL_HOST
 VERSION=2.4
@@ -137,5 +137,5 @@ AC_DEFINE_UNQUOTED(VERSION,"$VERSION")
 AC_SUBST(VERSION)
 AC_SUBST(UPDATED)
 AC_SUBST(USE_NLS)
-AC_OUTPUT(Makefile bas.1 test/runbas)
-chmod 755 test/runbas
+AC_OUTPUT(Makefile asbasic.1 test/runasbasic)
+chmod 755 test/runasbasic

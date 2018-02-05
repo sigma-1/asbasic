@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: bas 1.2\n"
+"Project-Id-Version: asbasic 1.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-25 20:16+0200\n"
 "PO-Revision-Date: 2002-11-09 18:26+0100\n"
@@ -18,121 +18,121 @@ msgstr "Aufruf"
 msgid "Proc Called"
 msgstr "Prozeduraufruf"
 
-#: bas.c:181
+#: asbasic.c:181
 msgid "index"
 msgstr "Index"
 
-#: bas.c:277
+#: asbasic.c:277
 msgid "actual parameter"
 msgstr "Aktualparameter"
 
-#: bas.c:651
+#: asbasic.c:651
 msgid "operand"
 msgstr "Operand"
 
-#: bas.c:847
+#: asbasic.c:847
 msgid "binary operand"
 msgstr "binären Operanden"
 
-#: bas.c:898
+#: asbasic.c:898
 msgid "unary operand"
 msgstr "monadischen Operanden"
 
-#: bas.c:988
+#: asbasic.c:988
 msgid "parenthetic"
 msgstr "Klammerausdruck"
 
-#: bas.c:1133
+#: asbasic.c:1133
 msgid "program"
 msgstr "Programm"
 
-#: bas.c:1137
+#: asbasic.c:1137
 msgid "`if' branch"
 msgstr "`if' Zweig"
 
-#: bas.c:1138
+#: asbasic.c:1138
 msgid "`do' loop"
 msgstr "`do' Schleife"
 
-#: bas.c:1139
+#: asbasic.c:1139
 msgid "`do while' or `do until' loop"
 msgstr "`do while' oder `do until' Schleife"
 
-#: bas.c:1140
+#: asbasic.c:1140
 msgid "`else' branch"
 msgstr "`else' Zweig"
 
-#: bas.c:1141
+#: asbasic.c:1141
 msgid "`for' loop"
 msgstr "`for' Schleife"
 
-#: bas.c:1142
+#: asbasic.c:1142
 msgid "`while' loop"
 msgstr "`while' Schleife"
 
-#: bas.c:1143
+#: asbasic.c:1143
 msgid "`repeat' loop"
 msgstr "`repeat' Schleife"
 
-#: bas.c:1144
+#: asbasic.c:1144
 msgid "`select case' control structure"
 msgstr "`select case' Steuerstruktur"
 
-#: bas.c:1145
+#: asbasic.c:1145
 msgid "function or procedure"
 msgstr "Funktion oder Prozedur"
 
-#: bas.c:1180 global.c:179 global.c:208 global.c:955
+#: asbasic.c:1180 global.c:179 global.c:208 global.c:955
 msgid "position"
 msgstr "Position"
 
-#: bas.c:1187 bas.c:1189 global.c:180 global.c:196 global.c:209 global.c:242
+#: asbasic.c:1187 asbasic.c:1189 global.c:180 global.c:196 global.c:209 global.c:242
 #: global.c:841 global.c:863 global.c:886 global.c:1048 global.c:1071
 #: global.c:1185 global.c:1240 global.c:1289 global.c:1299 global.c:1318
 msgid "length"
 msgstr "Länge"
 
-#: bas.c:1197 bas.c:1242 statement.c:1671
+#: asbasic.c:1197 asbasic.c:1242 statement.c:1671
 msgid "rhs"
 msgstr "rechte Seite"
 
-#: bas.c:1367 bas.c:1415
+#: asbasic.c:1367 asbasic.c:1415
 msgid "Error: "
 msgstr "Fehler: "
 
-#: bas.c:1435 bas.c:1440 bas.c:1448 bas.c:1453 statement.c:503 statement.c:511
+#: asbasic.c:1435 asbasic.c:1440 asbasic.c:1448 asbasic.c:1453 statement.c:503 statement.c:511
 msgid "dimension"
 msgstr "Dimension"
 
-#: bas.c:1476 bas.c:1479 statement.c:413 value.c:56
+#: asbasic.c:1476 asbasic.c:1479 statement.c:413 value.c:56
 msgid "integer"
 msgstr "Ganzzahl"
 
-#: bas.c:1480 bas.c:1496
+#: asbasic.c:1480 asbasic.c:1496
 msgid "converted value"
 msgstr "Konvertierter Wert"
 
-#: bas.c:1492 bas.c:1495 statement.c:414 value.c:57
+#: asbasic.c:1492 asbasic.c:1495 statement.c:414 value.c:57
 msgid "real"
 msgstr "Fließkomma"
 
-#: bas.c:1597
-msgid "bas: Executing `"
-msgstr "bas: Ausführung von `"
+#: asbasic.c:1597
+msgid "asbasic: Executing `"
+msgstr "asbasic: Ausführung von `"
 
-#: bas.c:1599
+#: asbasic.c:1599
 msgid "' failed ("
 msgstr "' nicht möglich ("
 
-#: bas.c:1601
+#: asbasic.c:1601
 msgid ").\n"
 msgstr ").\n"
 
-#: bas.c:1645
+#: asbasic.c:1645
 msgid "This is free software with ABSOLUTELY NO WARRANTY.\n"
 msgstr "Dies ist freie Software ohne JEGLICHE GEWÄHRLEISTUNG.\n"
 
-#: bas.c:1663
+#: asbasic.c:1663
 msgid ""
 "\n"
 "Break\n"
@@ -140,15 +140,15 @@ msgstr ""
 "\n"
 "Abbruch\n"
 
-#: bas.c:1701 error.h:95
+#: asbasic.c:1701 error.h:95
 msgid "Use `renum' to number program first"
 msgstr "Benutzen sie `renum' um das Programm erst zu nummerieren"
 
-#: bas.c:1711
+#: asbasic.c:1711
 msgid "END program\n"
 msgstr "END benutzt\n"
 
-#: bas.c:1717
+#: asbasic.c:1717
 msgid "Invalid line\n"
 msgstr "Ungültige Zeile\n"
 
@@ -839,75 +839,75 @@ msgstr "Argument der Quadratwurzel"
 msgid "`string$' of empty string"
 msgstr "`string$' von leerer Zeichenkette"
 
-#: main.c:76
+#: main.c:79
 #, fuzzy
-msgid "Usage: bas [-b] [-l file] [-r] [-u] [program [argument ...]]\n"
-msgstr "Aufruf: bas [-b] [-l Datei] [-u] [Programm [Argument ...]]\n"
+msgid "Usage: asbasic [-b] [-l file] [-r] [-u] [program [argument ...]]\n"
+msgstr "Aufruf: asbasic [-b] [-l Datei] [-u] [Programm [Argument ...]]\n"
 
-#: main.c:77 main.c:87
+#: main.c:80 main.c:90
 #, fuzzy
 msgid ""
-"       bas [--backslash-colon] [--lp file] [--restricted] [--uppercase] "
+"       asbasic [--backslash-colon] [--lp file] [--restricted] [--uppercase] "
 "[program [argument ...]]\n"
 msgstr ""
-"        bas [--backslash-colon] [--lp Datei] [--uppercase] [Programm "
+"        asbasic [--backslash-colon] [--lp Datei] [--uppercase] [Programm "
 "[Argument ...]]\n"
 
-#: main.c:78 main.c:88
-msgid "       bas -h|--help\n"
-msgstr "        bas -h|--help\n"
+#: main.c:81 main.c:91
+msgid "       asbasic -h|--help\n"
+msgstr "        asbasic -h|--help\n"
 
-#: main.c:79 main.c:89
-msgid "       bas --version\n"
-msgstr "        bas --version\n"
+#: main.c:82 main.c:92
+msgid "       asbasic --version\n"
+msgstr "        asbasic --version\n"
 
-#: main.c:81
-msgid "Try `bas -h' or `bas --help' for more information.\n"
-msgstr "Versuchen Sie `bas -h' oder `bas --help' für weitere Informationen.\n"
+#: main.c:84
+msgid "Try `asbasic -h' or `asbasic --help' for more information.\n"
+msgstr "Versuchen Sie `asbasic -h' oder `asbasic --help' für weitere Informationen.\n"
 
-#: main.c:86
-msgid "Usage: bas [-b] [-l file] [-u] [program [argument ...]]\n"
-msgstr "Aufruf: bas [-b] [-l Datei] [-u] [Programm [Argument ...]]\n"
+#: main.c:89
+msgid "Usage: asbasic [-b] [-l file] [-u] [program [argument ...]]\n"
+msgstr "Aufruf: asbasic [-b] [-l Datei] [-u] [Programm [Argument ...]]\n"
 
-#: main.c:91
+#: main.c:94
 msgid "BASIC interpreter.\n"
 msgstr "BASIC Interpreter.\n"
 
-#: main.c:93
+#: main.c:96
 msgid "-b, --backslash-colon  convert backslashs to colons\n"
 msgstr ""
 "-b, --backslash-colon  Konvertiert linksseitige Schrägstriche in\n"
 "                       Doppelpunkte\n"
 
-#: main.c:94
+#: main.c:97
 msgid "-l, --lp               write LPRINT output to file\n"
 msgstr "-l, --lp               Schreibt LPRINT Ausgaben in die Datei\n"
 
-#: main.c:95
+#: main.c:98
 msgid "-r, --restricted       forbid SHELL\n"
 msgstr ""
 
-#: main.c:96
+#: main.c:99
 msgid "-u, --uppercase        output all tokens in uppercase\n"
 msgstr "-u, --uppercase        Alle Tokens in Großbuchstaben ausgeben\n"
 
-#: main.c:97
+#: main.c:100
 msgid "-h, --help             display this help and exit\n"
 msgstr "-h, --help             Diese Hilfe anzeigen und beenden\n"
 
-#: main.c:98
+#: main.c:101
 msgid "    --version          output version information and exit\n"
 msgstr "    --version          Versionsinformation ausgeben und beenden\n"
 
-#: main.c:100
+#: main.c:103
 msgid "Report bugs to <michael@moria.de>.\n"
 msgstr "Teilen Sie Fehler <michael@moria.de> mit.\n"
 
-#: main.c:105
+#: main.c:108
 #, c-format
-msgid "bas: Opening `%s' for line printer output failed (%s).\n"
+msgid "asbasic: Opening `%s' for line printer output failed (%s).\n"
 msgstr ""
-"bas: Die Datei `%s' kann nicht für Druckausgaben geöffnet werden (%s).\n"
+"asbasic: Die Datei `%s' kann nicht für Druckausgaben geöffnet werden (%s).\n"
 
 #: program.c:295
 #, c-format

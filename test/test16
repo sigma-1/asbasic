@@ -21,7 +21,7 @@ a$(1,0)=ab$(0,1)=b
 a$(1,0)=bb$(0,1)=a
 eof
 
-sh ./test/runbas test.bas >test.data
+sh ./test/runasbasic test.bas >test.data
 
 if cmp test.ref test.data
 then

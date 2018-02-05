@@ -24,135 +24,135 @@ msgstr ""
 msgid "Proc Called"
 msgstr ""
 
-#: bas.c:181
+#: asbasic.c:181
 msgid "index"
 msgstr ""
 
-#: bas.c:277
+#: asbasic.c:277
 msgid "actual parameter"
 msgstr ""
 
-#: bas.c:651
+#: asbasic.c:651
 msgid "operand"
 msgstr ""
 
-#: bas.c:847
+#: asbasic.c:847
 msgid "binary operand"
 msgstr ""
 
-#: bas.c:898
+#: asbasic.c:898
 msgid "unary operand"
 msgstr ""
 
-#: bas.c:988
+#: asbasic.c:988
 msgid "parenthetic"
 msgstr ""
 
-#: bas.c:1133
+#: asbasic.c:1133
 msgid "program"
 msgstr ""
 
-#: bas.c:1137
+#: asbasic.c:1137
 msgid "`if' branch"
 msgstr ""
 
-#: bas.c:1138
+#: asbasic.c:1138
 msgid "`do' loop"
 msgstr ""
 
-#: bas.c:1139
+#: asbasic.c:1139
 msgid "`do while' or `do until' loop"
 msgstr ""
 
-#: bas.c:1140
+#: asbasic.c:1140
 msgid "`else' branch"
 msgstr ""
 
-#: bas.c:1141
+#: asbasic.c:1141
 msgid "`for' loop"
 msgstr ""
 
-#: bas.c:1142
+#: asbasic.c:1142
 msgid "`while' loop"
 msgstr ""
 
-#: bas.c:1143
+#: asbasic.c:1143
 msgid "`repeat' loop"
 msgstr ""
 
-#: bas.c:1144
+#: asbasic.c:1144
 msgid "`select case' control structure"
 msgstr ""
 
-#: bas.c:1145
+#: asbasic.c:1145
 msgid "function or procedure"
 msgstr ""
 
-#: bas.c:1180 global.c:179 global.c:208 global.c:955
+#: asbasic.c:1180 global.c:179 global.c:208 global.c:955
 msgid "position"
 msgstr ""
 
-#: bas.c:1187 bas.c:1189 global.c:180 global.c:196 global.c:209 global.c:242
+#: asbasic.c:1187 asbasic.c:1189 global.c:180 global.c:196 global.c:209 global.c:242
 #: global.c:841 global.c:863 global.c:886 global.c:1048 global.c:1071
 #: global.c:1185 global.c:1240 global.c:1289 global.c:1299 global.c:1318
 msgid "length"
 msgstr ""
 
-#: bas.c:1197 bas.c:1242 statement.c:1671
+#: asbasic.c:1197 asbasic.c:1242 statement.c:1671
 msgid "rhs"
 msgstr ""
 
-#: bas.c:1367 bas.c:1415
+#: asbasic.c:1367 asbasic.c:1415
 msgid "Error: "
 msgstr ""
 
-#: bas.c:1435 bas.c:1440 bas.c:1448 bas.c:1453 statement.c:503 statement.c:511
+#: asbasic.c:1435 asbasic.c:1440 asbasic.c:1448 asbasic.c:1453 statement.c:503 statement.c:511
 msgid "dimension"
 msgstr ""
 
-#: bas.c:1476 bas.c:1479 statement.c:413 value.c:56
+#: asbasic.c:1476 asbasic.c:1479 statement.c:413 value.c:56
 msgid "integer"
 msgstr ""
 
-#: bas.c:1480 bas.c:1496
+#: asbasic.c:1480 asbasic.c:1496
 msgid "converted value"
 msgstr ""
 
-#: bas.c:1492 bas.c:1495 statement.c:414 value.c:57
+#: asbasic.c:1492 asbasic.c:1495 statement.c:414 value.c:57
 msgid "real"
 msgstr ""
 
-#: bas.c:1597
-msgid "bas: Executing `"
+#: asbasic.c:1597
+msgid "asbasic: Executing `"
 msgstr ""
 
-#: bas.c:1599
+#: asbasic.c:1599
 msgid "' failed ("
 msgstr ""
 
-#: bas.c:1601
+#: asbasic.c:1601
 msgid ").\n"
 msgstr ""
 
-#: bas.c:1645
+#: asbasic.c:1645
 msgid "This is free software with ABSOLUTELY NO WARRANTY.\n"
 msgstr ""
 
-#: bas.c:1663
+#: asbasic.c:1663
 msgid ""
 "\n"
 "Break\n"
 msgstr ""
 
-#: bas.c:1701 error.h:95
+#: asbasic.c:1701 error.h:95
 msgid "Use `renum' to number program first"
 msgstr ""
 
-#: bas.c:1711
+#: asbasic.c:1711
 msgid "END program\n"
 msgstr ""
 
-#: bas.c:1717
+#: asbasic.c:1717
 msgid "Invalid line\n"
 msgstr ""
 
@@ -839,67 +839,67 @@ msgstr ""
 msgid "`string$' of empty string"
 msgstr ""
 
-#: main.c:76
-msgid "Usage: bas [-b] [-l file] [-r] [-u] [program [argument ...]]\n"
+#: main.c:79
+msgid "Usage: asbasic [-b] [-l file] [-r] [-u] [program [argument ...]]\n"
 msgstr ""
 
-#: main.c:77 main.c:87
+#: main.c:80 main.c:90
 msgid ""
-"       bas [--backslash-colon] [--lp file] [--restricted] [--uppercase] "
+"       asbasic [--backslash-colon] [--lp file] [--restricted] [--uppercase] "
 "[program [argument ...]]\n"
 msgstr ""
 
-#: main.c:78 main.c:88
-msgid "       bas -h|--help\n"
+#: main.c:81 main.c:91
+msgid "       asbasic -h|--help\n"
 msgstr ""
 
-#: main.c:79 main.c:89
-msgid "       bas --version\n"
+#: main.c:82 main.c:92
+msgid "       asbasic --version\n"
 msgstr ""
 
-#: main.c:81
-msgid "Try `bas -h' or `bas --help' for more information.\n"
+#: main.c:84
+msgid "Try `asbasic -h' or `asbasic --help' for more information.\n"
 msgstr ""
 
-#: main.c:86
-msgid "Usage: bas [-b] [-l file] [-u] [program [argument ...]]\n"
-msgstr ""
-
-#: main.c:91
-msgid "BASIC interpreter.\n"
-msgstr ""
-
-#: main.c:93
-msgid "-b, --backslash-colon  convert backslashs to colons\n"
+#: main.c:89
+msgid "Usage: asbasic [-b] [-l file] [-u] [program [argument ...]]\n"
 msgstr ""
 
 #: main.c:94
-msgid "-l, --lp               write LPRINT output to file\n"
-msgstr ""
-
-#: main.c:95
-msgid "-r, --restricted       forbid SHELL\n"
+msgid "BASIC interpreter.\n"
 msgstr ""
 
 #: main.c:96
-msgid "-u, --uppercase        output all tokens in uppercase\n"
+msgid "-b, --backslash-colon  convert backslashs to colons\n"
 msgstr ""
 
 #: main.c:97
-msgid "-h, --help             display this help and exit\n"
+msgid "-l, --lp               write LPRINT output to file\n"
 msgstr ""
 
 #: main.c:98
-msgid "    --version          output version information and exit\n"
+msgid "-r, --restricted       forbid SHELL\n"
+msgstr ""
+
+#: main.c:99
+msgid "-u, --uppercase        output all tokens in uppercase\n"
 msgstr ""
 
 #: main.c:100
+msgid "-h, --help             display this help and exit\n"
+msgstr ""
+
+#: main.c:101
+msgid "    --version          output version information and exit\n"
+msgstr ""
+
+#: main.c:103
 msgid "Report bugs to <michael@moria.de>.\n"
 msgstr ""
 
-#: main.c:105
+#: main.c:108
 #, c-format
-msgid "bas: Opening `%s' for line printer output failed (%s).\n"
+msgid "asbasic: Opening `%s' for line printer output failed (%s).\n"
 msgstr ""
 
 #: program.c:295

@@ -20,7 +20,7 @@ local handler caught error in line 60
 global handler 2 caught error in line  90 
 eof
 
-sh ./test/runbas test.bas >test.data
+sh ./test/runasbasic test.bas >test.data
 
 if cmp test.ref test.data
 then

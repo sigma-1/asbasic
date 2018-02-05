@@ -38,7 +38,7 @@ cat >test.ref <<'eof'
  99.9998      
 eof
 
-sh ./test/runbas test.bas >test.data
+sh ./test/runasbasic test.bas >test.data
 
 if cmp test.ref test.data
 then

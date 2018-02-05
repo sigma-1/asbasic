@@ -26,7 +26,7 @@ Error: No such line at: 15
 50 print 50
 eof
 
-sh ./test/runbas <test.input >test.data
+sh ./test/runasbasic <test.input >test.data
 
 if cmp test.ref test.data
 then

@@ -22,7 +22,7 @@ Error: end of `data' in line 80 at:
         ^
 eof
 
-sh ./test/runbas test.bas >test.data
+sh ./test/runasbasic test.bas >test.data
 
 if cmp test.ref test.data
 then

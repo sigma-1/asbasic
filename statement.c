@@ -779,7 +779,7 @@ struct Value *stmt_END(struct Value *value) /*{{{*/
   if (pass==INTERPRET)
   {
     pc=pc.token->u.endpc;
-    bas_end=1;
+    asbasic_end=1;
   }
   if (pass==DECLARE || pass==COMPILE)
   {
@@ -3784,14 +3784,14 @@ struct Value *stmt_SYSTEM(struct Value *value) /*{{{*/
         FS_nextline(STDCHANNEL);
         if (tolower(ch)==*_("yes"))
         {
-          bas_exit();
+          asbasic_exit();
           exit(0);
         }
       }
     }
     else
     {
-      bas_exit();
+      asbasic_exit();
       exit(0);
     }
   }
